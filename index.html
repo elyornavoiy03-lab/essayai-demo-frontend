@@ -1,28 +1,83 @@
 <!doctype html>
 <html lang="uz">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EssayAI — Demo</title>
-<style>
-body{font-family:Arial,Helvetica,sans-serif;max-width:900px;margin:24px auto;color:#111;background:#f7fafc}
-.card{background:white;padding:20px;border-radius:8px;box-shadow:0 6px 18px rgba(15,23,42,0.06);margin-top:16px}
-textarea{width:100%;min-height:180px;padding:12px;border-radius:6px;border:1px solid #e2e8f0;font-size:14px}
-button{background:#2563eb;color:white;border:none;padding:10px 14px;border-radius:8px;font-weight:700;cursor:pointer}
-.result{margin-top:12px;padding:12px;border-radius:6px;background:#f1f5f9}
-</style>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>EssayCheckAI — Demo</title>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
+<header class="site-hero">
+  <div class="container">
+    <h1>EssayCheckAI — Demo</h1>
+    <p class="lead">AI asosida esse baholash. DTM mezonlariga mos, tez va ishonchli tahlil.</p>
+  </div>
+</header>
 
-<h1>EssayAI — Demo</h1>
-<div class="card">
-  <label>Esse matni:</label>
-  <textarea id="essay" placeholder="Matn kiriting..."></textarea>
-  <button id="analyze">Tahlil qilish</button>
-  <div class="result" id="result" style="display:none"></div>
-</div>
+<main class="container">
+  <section class="card demo-card">
+    <label for="essay"><strong>Esse matni:</strong></label>
+    <textarea id="essay" placeholder="Matn kiriting..."></textarea>
+    <div class="controls">
+      <button id="analyze">Tahlil qilish</button>
+    </div>
+    <div class="result" id="result" style="display:none"></div>
+  </section>
+
+  <!-- New polished sections: 1..5 -->
+  <section class="info-grid">
+    <article class="info-card">
+      <h2>1. Muammo → Yechim</h2>
+      <p><strong>Muammo:</strong> Essa yozishda o‘quvchilar ko‘pincha to‘g‘ri va tizimli tekshiruvchi topa olmaydi, va baholash jarayoni qo‘lda bo‘lib, natijalarni kutish uzoq davom etadi.</p>
+      <p><strong>Qoshimcha:</strong> Ona tilidan milliy sertifikatga tayyorlanayotgan abituriyentlar asosan esse yozishda qiynaladi — ular yozgan matnni to‘g‘ri va tizimli tekshira oladigan malakali mutaxassislar kam. Natijada talabalar real kamchiliklar va uslubiy xatolarni ko‘ra olmaydi hamda imtihon natijasini qo‘lda tekshirish tufayli javobni olish uchun o‘rtacha bir oy kutishga majbur bo‘ladi.</p>
+    </article>
+
+    <article class="info-card">
+      <h2>2. Jamoa</h2>
+      <p><strong>Elyor Buriev</strong> — Asoschi, AI & Full‑stack</p>
+      <ul>
+        <li>Python, FastAPI, ML (RoBERTa, TrOCR)</li>
+        <li>Frontend: HTML/CSS/JS</li>
+        <li>Dataset tayyorlash va model trening</li>
+      </ul>
+    </article>
+
+    <article class="info-card">
+      <h2>3. Nima uchun biz hal qila olamiz?</h2>
+      <ul>
+        <li>1000+ tozalangan esse dataset</li>
+        <li>Backend va ML integratsiya tajribasi</li>
+        <li>MVP (hozirgi demo) allaqachon ishlamoqda</li>
+      </ul>
+    </article>
+
+    <article class="info-card">
+      <h2>4. Yo‘l xaritasi (Roadmap)</h2>
+      <ol>
+        <li>Idea — kontsept</li>
+        <li>Prototype — demo & validator</li>
+        <li>MVP — hozirgi platforma</li>
+        <li>Launch — to'liq trenlangan model</li>
+      </ol>
+    </article>
+
+    <article class="info-card">
+      <h2>5. Amalga oshirish rejasi</h2>
+      <p><strong>Bosqichlar:</strong></p>
+      <ul>
+        <li>Datasetni kengaytirish (5000+)</li>
+        <li>Model train (RoBERTa/DeBERTa)</li>
+        <li>Teacher dashboard va analytics</li>
+      </ul>
+      <p><strong>Texnologiyalar:</strong> FastAPI, Render, Netlify, RoBERTa, TrOCR</p>
+    </article>
+  </section>
+
+  <footer class="site-footer">
+    <p>© EssayCheckAI — Demo. Loyihani rivojlantirish: Elyor Buriev</p>
+  </footer>
+</main>
 
 <script src="script.js"></script>
-
 </body>
 </html>
