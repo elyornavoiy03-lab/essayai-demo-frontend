@@ -1,83 +1,99 @@
 <!doctype html>
 <html lang="uz">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>EssayCheckAI — Demo</title>
-<link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>EssayCheckAI — Demo</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<header class="site-hero">
-  <div class="container">
-    <h1>EssayCheckAI — Demo</h1>
-    <p class="lead">AI asosida esse baholash. DTM mezonlariga mos, tez va ishonchli tahlil.</p>
-  </div>
-</header>
+  <header class="site-hero">
+    <div class="container hero-row">
+      <div class="logo">
+        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <rect x="2" y="3" width="20" height="18" rx="3" stroke="white" stroke-width="1.4" fill="none"/>
+          <path d="M7 8H17" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M7 12H17" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+          <path d="M7 16H14" stroke="white" stroke-width="1.4" stroke-linecap="round"/>
+        </svg>
+        <span class="brand">EssayCheckAI</span>
+      </div>
 
-<main class="container">
-  <section class="card demo-card">
-    <label for="essay"><strong>Esse matni:</strong></label>
-    <textarea id="essay" placeholder="Matn kiriting..."></textarea>
-    <div class="controls">
-      <button id="analyze">Tahlil qilish</button>
+      <nav class="hero-nav">
+        <a class="cta" href="#demo">Demoni sinash</a>
+      </nav>
     </div>
-    <div class="result" id="result" style="display:none"></div>
-  </section>
 
-  <!-- New polished sections: 1..5 -->
-  <section class="info-grid">
-    <article class="info-card">
-      <h2>1. Muammo → Yechim</h2>
-      <p><strong>Muammo:</strong> Essa yozishda o‘quvchilar ko‘pincha to‘g‘ri va tizimli tekshiruvchi topa olmaydi, va baholash jarayoni qo‘lda bo‘lib, natijalarni kutish uzoq davom etadi.</p>
-      <p><strong>Qoshimcha:</strong> Ona tilidan milliy sertifikatga tayyorlanayotgan abituriyentlar asosan esse yozishda qiynaladi — ular yozgan matnni to‘g‘ri va tizimli tekshira oladigan malakali mutaxassislar kam. Natijada talabalar real kamchiliklar va uslubiy xatolarni ko‘ra olmaydi hamda imtihon natijasini qo‘lda tekshirish tufayli javobni olish uchun o‘rtacha bir oy kutishga majbur bo‘ladi.</p>
-    </article>
+    <div class="container hero-content">
+      <h1>EssayCheckAI — Esse baholashni oson qilamiz</h1>
+      <p class="lead">AI asosida DTM mezonlariga mos esse baholovchi vosita — tez, aniqlik bilan va adolatli.</p>
+    </div>
+  </header>
 
-    <article class="info-card">
-      <h2>2. Jamoa</h2>
-      <p><strong>Elyor Buriev</strong> — Asoschi, AI & Full‑stack</p>
-      <ul>
-        <li>Python, FastAPI, ML (RoBERTa, TrOCR)</li>
-        <li>Frontend: HTML/CSS/JS</li>
-        <li>Dataset tayyorlash va model trening</li>
-      </ul>
-    </article>
+  <main class="container">
+    <section id="demo" class="card demo-card">
+      <label for="essay"><strong>Esse matni:</strong></label>
+      <textarea id="essay" placeholder="Matn kiriting..."></textarea>
+      <div class="controls">
+        <button id="analyze">Tahlil qilish</button>
+      </div>
+      <div class="result" id="result" style="display:none" aria-live="polite"></div>
+    </section>
 
-    <article class="info-card">
-      <h2>3. Nima uchun biz hal qila olamiz?</h2>
-      <ul>
-        <li>1000+ tozalangan esse dataset</li>
-        <li>Backend va ML integratsiya tajribasi</li>
-        <li>MVP (hozirgi demo) allaqachon ishlamoqda</li>
-      </ul>
-    </article>
+    <section class="info-grid">
+      <article class="info-card">
+        <h2>1. Muammo → Yechim</h2>
+        <p><strong>Muammo:</strong> Essa yozishda o‘quvchilar ko‘pincha to‘g‘ri va tizimli tekshiruvchi topa olmaydi, va baholash jarayoni qo‘lda bo‘lib, natijalarni kutish uzoq davom etadi.</p>
+        <p><strong>Qoshimcha:</strong> Ona tilidan milliy sertifikatga tayyorlanayotgan abituriyentlar asosan esse yozishda qiynaladi — ular yozgan matnni to‘g‘ri va tizimli tekshira oladigan malakali mutaxassislar kam. Natijada talabalar real kamchiliklar va uslubiy xatolarni ko‘ra olmaydi hamda imtihon natijasini qo‘lda tekshirish tufayli javobni olish uchun o‘rtacha bir oy kutishga majbur bo‘ladi.</p>
+      </article>
 
-    <article class="info-card">
-      <h2>4. Yo‘l xaritasi (Roadmap)</h2>
-      <ol>
-        <li>Idea — kontsept</li>
-        <li>Prototype — demo & validator</li>
-        <li>MVP — hozirgi platforma</li>
-        <li>Launch — to'liq trenlangan model</li>
-      </ol>
-    </article>
+      <article class="info-card">
+        <h2>2. Jamoa</h2>
+        <p><strong>Elyor Buriev</strong> — Asoschi, AI & Full‑stack</p>
+        <ul>
+          <li>Python, FastAPI, ML (RoBERTa, TrOCR)</li>
+          <li>Frontend: HTML/CSS/JS</li>
+          <li>Dataset tayyorlash va model trening</li>
+        </ul>
+      </article>
 
-    <article class="info-card">
-      <h2>5. Amalga oshirish rejasi</h2>
-      <p><strong>Bosqichlar:</strong></p>
-      <ul>
-        <li>Datasetni kengaytirish (5000+)</li>
-        <li>Model train (RoBERTa/DeBERTa)</li>
-        <li>Teacher dashboard va analytics</li>
-      </ul>
-      <p><strong>Texnologiyalar:</strong> FastAPI, Render, Netlify, RoBERTa, TrOCR</p>
-    </article>
-  </section>
+      <article class="info-card">
+        <h2>3. Nima uchun biz hal qila olamiz?</h2>
+        <ul>
+          <li>1000+ tozalangan esse dataset</li>
+          <li>Backend va ML integratsiya tajribasi</li>
+          <li>MVP (hozirgi demo) allaqachon ishlamoqda</li>
+        </ul>
+      </article>
 
-  <footer class="site-footer">
-    <p>© EssayCheckAI — Demo. Loyihani rivojlantirish: Elyor Buriev</p>
-  </footer>
-</main>
+      <article class="info-card">
+        <h2>4. Yo‘l xaritasi (Roadmap)</h2>
+        <ol>
+          <li>Idea — kontsept</li>
+          <li>Prototype — demo & validator</li>
+          <li>MVP — hozirgi platforma</li>
+          <li>Launch — to'liq trenlangan model</li>
+        </ol>
+      </article>
 
-<script src="script.js"></script>
+      <article class="info-card">
+        <h2>5. Amalga oshirish rejasi</h2>
+        <p><strong>Bosqichlar:</strong></p>
+        <ul>
+          <li>Datasetni kengaytirish (5000+)</li>
+          <li>Model train (RoBERTa/DeBERTa)</li>
+          <li>Teacher dashboard va analytics</li>
+        </ul>
+        <p><strong>Texnologiyalar:</strong> FastAPI, Render, Netlify, RoBERTa, TrOCR</p>
+      </article>
+    </section>
+
+    <footer class="site-footer">
+      <p>© EssayCheckAI — Demo. Loyihani rivojlantirish: Elyor Buriev</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>

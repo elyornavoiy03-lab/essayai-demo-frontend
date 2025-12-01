@@ -43,11 +43,13 @@ document.getElementById('analyze').addEventListener('click', async ()=>{
   if(!text.trim()){
     out.style.display = "block";
     out.innerHTML = "<b>Iltimos, matn kiriting.</b>";
+    out.classList.add('fade-in');
     return;
   }
 
   out.style.display = "block";
-  out.innerHTML = "⏳ AI tahlil qilmoqda...";
+  out.innerHTML = "<div style='opacity:0.7'>⏳ AI tahlil qilmoqda...</div>";
+  out.classList.remove('fade-in');
 
   try {
     const r = await scoreEssayAPI(text);
@@ -59,7 +61,10 @@ document.getElementById('analyze').addEventListener('click', async ()=>{
       Gaplar: ${r.sentences}
       ${generateFeedback(text)}
     `;
+    // add fade-in after injecting content
+    out.classList.add('fade-in');
   } catch(e){
     out.innerHTML = "<b>Xatolik: backend bilan bog‘lanib bo‘lmadi.</b>";
+    out.classList.add('fade-in');
   }
 });

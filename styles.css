@@ -1,3 +1,4 @@
+
 :root{
   --bg:#f6f8fb;
   --card:#ffffff;
@@ -8,14 +9,13 @@
   --radius:14px;
   --max:1100px;
   --shadow: 0 8px 28px rgba(15,23,42,0.08);
-  --glass-border: rgba(99,102,241,0.06);
 }
 
 *{box-sizing:border-box}
 html,body{height:100%}
 body{
   margin:0;
-  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
+  font-family: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
   background: linear-gradient(180deg, #f7fbff 0%, #f6f8fb 100%);
   color:#0f172a;
   -webkit-font-smoothing:antialiased;
@@ -34,24 +34,20 @@ body{
 .site-hero{
   background: linear-gradient(90deg, rgba(37,99,235,0.95), rgba(30,64,175,0.95));
   color:#fff;
-  padding:36px;
+  padding:26px;
   border-radius:16px;
   box-shadow: var(--shadow);
   margin:20px auto;
 }
-.site-hero .container{padding:0}
-.site-hero h1{
-  margin:0;
-  font-size:28px;
-  letter-spacing: -0.2px;
-  font-weight:700;
-}
-.site-hero .lead{
-  margin-top:8px;
-  opacity:0.95;
-  color:rgba(255,255,255,0.9);
-  font-size:15px;
-}
+.hero-row{display:flex;align-items:center;justify-content:space-between;gap:12px}
+.logo{display:flex;align-items:center;gap:12px}
+.logo svg{flex-shrink:0}
+.brand{font-family:'Poppins', sans-serif;font-weight:600;font-size:18px}
+.hero-nav{}
+.cta{display:inline-block;background:white;color:var(--accent);padding:10px 14px;border-radius:10px;border:none;font-weight:700;text-decoration:none}
+.hero-content{margin-top:18px}
+.site-hero h1{margin:0;font-size:28px;letter-spacing:-0.3px;font-weight:700}
+.site-hero .lead{margin-top:8px;opacity:0.95;color:rgba(255,255,255,0.95);font-size:15px}
 
 /* Demo card */
 .demo-card{
@@ -120,6 +116,16 @@ button#analyze:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(37,9
 
 /* Footer */
 .site-footer{margin-top:32px;padding:18px;text-align:center;color:var(--muted);font-size:14px}
+
+/* Fade-in animation */
+.fade-in {
+  animation: fadeIn .56s ease forwards;
+  opacity: 0;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
 
 /* Small helpers */
 .lead-ghost{color:var(--muted);font-size:14px;margin-top:6px}
